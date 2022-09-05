@@ -1,0 +1,283 @@
+@import "variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+%fixed-width {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@mixin colour($bg-col, $color) {
+  background-color: $bg-col;
+  color: $color;
+}
+
+@mixin height-width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+%properties {
+  @include height-width(40px, 160px);
+  @include colour($black, $white);
+  border-radius: 5px;
+}
+
+.icon {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.navbar {
+  background-color: $bisque;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  align-items: center;
+  .left img {
+    @include height-width(60px, 60px);
+  }
+  .middle {
+    margin: 0 auto;
+    font-family: $font1;
+    font-size: 25px;
+  }
+
+  .right img {
+    @include height-width(30px, 30px);
+    margin: 0 15px;
+  }
+}
+
+.banner {
+  background: url(../images/background3.jpg) no-repeat center center/cover;
+  .banner-content {
+    @extend %fixed-width;
+    text-align: left;
+    margin: auto;
+    padding: 15px;
+    h2 {
+      font-family: $font2;
+      font-size: 150px;
+      font-weight: lighter;
+    }
+    p {
+      font-size: 15px;
+      font-family: $font3;
+    }
+    .btn {
+      @include height-width(50px, 250px);
+      margin-top: 20px;
+      @include colour($black, $white);
+    }
+  }
+}
+
+.product {
+  text-align: center;
+  padding: 20px 10px;
+  .heading {
+    @extend %fixed-width;
+    text-align: center;
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .product-item {
+    @extend %fixed-width;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .items {
+      border: 1px solid $black;
+      text-align: center;
+      margin: 15px;
+      max-width: 20%;
+      img {
+        width: 100%;
+      }
+      .select {
+        display: flex;
+        height: 50px;
+        @include colour($black, $white);
+        justify-content: space-between;
+        padding: 2px 5px;
+        .btn {
+          align-self: center;
+          display: flex;
+
+          button {
+            border: 2px solid $black;
+            border-radius: 28px;
+            margin: auto 2px;
+            font-size: 7px;
+            padding: 5px;
+          }
+        }
+        p {
+          align-self: center;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .more {
+    @extend %properties;
+  }
+}
+
+.about-section {
+  background-color: $bisque;
+  .about {
+    @extend %fixed-width;
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .about-content {
+      max-width: 70%;
+      margin: 30px 10px;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        margin: 20px 0;
+        font-size: 15px;
+      }
+      button {
+        @extend %properties;
+      }
+    }
+  }
+  .image {
+    width: 33%;
+    img {
+      max-width: 245px;
+    }
+  }
+}
+
+.customer-section {
+  .customer {
+    @extend %fixed-width;
+    text-align: center;
+    padding: 20px 10px;
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .card {
+      box-shadow: 2px 2px 5px 5px $shadow;
+      border: 2px solid $black;
+      width: 40%;
+      margin: 50px auto;
+      display: flex;
+      padding: 20px;
+      align-items: center;
+      justify-content: space-around;
+      .pic {
+        border: 2px solid $black;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        position: relative;
+        background-color: $bisque;
+        .img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 40px;
+        }
+      }
+
+      .detail {
+        text-align: left;
+        padding: 20px;
+        width: 80%;
+        font-size: 14px;
+      }
+    }
+    .arrow {
+      .left,
+      .right {
+        box-shadow: 2px 2px 2px 2px $shadow;
+        border-radius: 50%;
+        display: inline-block;
+        height: 39px;
+        width: 39px;
+        margin: 5px;
+        padding: 10px;
+        .leftArrow,
+        .rightArrow {
+          font-size: 15px;
+        }
+      }
+    }
+    .touch {
+      margin-top: 40px;
+
+      .con {
+        display: inline-block;
+        text-align: left;
+        width: 60%;
+        padding: 12px;
+      }
+      .contactform {
+        @include height-width(44px, 140px);
+        @include colour($black, $white);
+      }
+      .newletter {
+        @include height-width(44px, 140px);
+        background-color: $bisque;
+      }
+    }
+  }
+}
+
+.location {
+  img {
+    width: 100%;
+  }
+}
+
+.footer-section {
+  @include colour($black, $white);
+  .bottom {
+    @extend %fixed-width;
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-around;
+    vertical-align: top;
+    h3 {
+      margin-bottom: 15px;
+    }
+
+    .midfooter {
+      text-align: center;
+      width: 40%;
+      h2,
+      p,
+      div,
+      hr {
+        margin-bottom: 15px;
+      }
+      div p {
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@import "media";

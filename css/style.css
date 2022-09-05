@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.banner .banner-content, .product .heading, .product .product-item, .about-section .about, .customer-section .customer, .footer-section .bottom {
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.product .more, .about-section .about .about-content button {
+  height: 40px;
+  width: 160px;
+  background-color: black;
+  color: white;
+  border-radius: 5px; }
+
+.icon {
+  font-size: 10px;
+  margin-right: 5px; }
+
+.navbar {
+  background-color: bisque;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  align-items: center; }
+  .navbar .left img {
+    height: 60px;
+    width: 60px; }
+  .navbar .middle {
+    margin: 0 auto;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 25px; }
+  .navbar .right img {
+    height: 30px;
+    width: 30px;
+    margin: 0 15px; }
+
+.banner {
+  background: url(../images/background3.jpg) no-repeat center center/cover; }
+  .banner .banner-content {
+    text-align: left;
+    margin: auto;
+    padding: 15px; }
+    .banner .banner-content h2 {
+      font-family: "Mea Culpa", cursive;
+      font-size: 150px;
+      font-weight: lighter; }
+    .banner .banner-content p {
+      font-size: 15px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; }
+    .banner .banner-content .btn {
+      height: 50px;
+      width: 250px;
+      margin-top: 20px;
+      background-color: black;
+      color: white; }
+
+.product {
+  text-align: center;
+  padding: 20px 10px; }
+  .product .heading {
+    text-align: center; }
+    .product .heading h2 {
+      font-size: 30px;
+      font-weight: bold; }
+  .product .product-item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .product .product-item .items {
+      border: 1px solid black;
+      text-align: center;
+      margin: 15px;
+      max-width: 20%; }
+      .product .product-item .items img {
+        width: 100%; }
+      .product .product-item .items .select {
+        display: flex;
+        height: 50px;
+        background-color: black;
+        color: white;
+        justify-content: space-between;
+        padding: 2px 5px; }
+        .product .product-item .items .select .btn {
+          align-self: center;
+          display: flex; }
+          .product .product-item .items .select .btn button {
+            border: 2px solid black;
+            border-radius: 28px;
+            margin: auto 2px;
+            font-size: 7px;
+            padding: 5px; }
+        .product .product-item .items .select p {
+          align-self: center;
+          font-size: 12px; }
+
+.about-section {
+  background-color: bisque; }
+  .about-section .about {
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .about-section .about .about-content {
+      max-width: 70%;
+      margin: 30px 10px; }
+      .about-section .about .about-content h2 {
+        font-size: 30px; }
+      .about-section .about .about-content p {
+        margin: 20px 0;
+        font-size: 15px; }
+  .about-section .image {
+    width: 33%; }
+    .about-section .image img {
+      max-width: 245px; }
+
+.customer-section .customer {
+  text-align: center;
+  padding: 20px 10px; }
+  .customer-section .customer h2 {
+    font-size: 30px;
+    font-weight: bold; }
+  .customer-section .customer .card {
+    box-shadow: 2px 2px 5px 5px #9d9dc3;
+    border: 2px solid black;
+    width: 40%;
+    margin: 50px auto;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around; }
+    .customer-section .customer .card .pic {
+      border: 2px solid black;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      position: relative;
+      background-color: bisque; }
+      .customer-section .customer .card .pic .img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px; }
+    .customer-section .customer .card .detail {
+      text-align: left;
+      padding: 20px;
+      width: 80%;
+      font-size: 14px; }
+  .customer-section .customer .arrow .left,
+  .customer-section .customer .arrow .right {
+    box-shadow: 2px 2px 2px 2px #9d9dc3;
+    border-radius: 50%;
+    display: inline-block;
+    height: 39px;
+    width: 39px;
+    margin: 5px;
+    padding: 10px; }
+    .customer-section .customer .arrow .left .leftArrow,
+    .customer-section .customer .arrow .left .rightArrow,
+    .customer-section .customer .arrow .right .leftArrow,
+    .customer-section .customer .arrow .right .rightArrow {
+      font-size: 15px; }
+  .customer-section .customer .touch {
+    margin-top: 40px; }
+    .customer-section .customer .touch .con {
+      display: inline-block;
+      text-align: left;
+      width: 60%;
+      padding: 12px; }
+    .customer-section .customer .touch .contactform {
+      height: 44px;
+      width: 140px;
+      background-color: black;
+      color: white; }
+    .customer-section .customer .touch .newletter {
+      height: 44px;
+      width: 140px;
+      background-color: bisque; }
+
+.location img {
+  width: 100%; }
+
+.footer-section {
+  background-color: black;
+  color: white; }
+  .footer-section .bottom {
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-around;
+    vertical-align: top; }
+    .footer-section .bottom h3 {
+      margin-bottom: 15px; }
+    .footer-section .bottom .midfooter {
+      text-align: center;
+      width: 40%; }
+      .footer-section .bottom .midfooter h2,
+      .footer-section .bottom .midfooter p,
+      .footer-section .bottom .midfooter div,
+      .footer-section .bottom .midfooter hr {
+        margin-bottom: 15px; }
+      .footer-section .bottom .midfooter div p {
+        display: inline;
+        margin-right: 10px; }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product .product-item .items {
+    margin: 8px;
+    max-width: 22%; }
+
+  .about-section .about .about-content {
+    max-width: 65%; }
+
+  .customer-section .customer .card {
+    width: 60%; } }
+@media (min-width: 330px) and (max-width: 768px) {
+  .navbar .left img {
+    height: 25px;
+    width: 25px; }
+  .navbar .middle {
+    font-size: 15px; }
+  .navbar .right img {
+    height: 10px;
+    width: 10px;
+    margin: 0px 5px; }
+
+  .banner .banner-content {
+    width: 80%;
+    margin: auto 25px; }
+    .banner .banner-content h2 {
+      font-size: 70px; }
+    .banner .banner-content p {
+      font-size: 9px; }
+    .banner .banner-content .btn {
+      width: 130px;
+      height: 30px; }
+
+  .product .heading h2 {
+    font-size: 20px; }
+  .product .heading p {
+    font-size: 10px; }
+  .product .product-item .items {
+    margin: 7px;
+    max-width: 45%; }
+    .product .product-item .items .select .btn button {
+      height: 21px;
+      padding: 2px; }
+
+  .about-section .about {
+    flex-direction: column-reverse; }
+    .about-section .about .about-content {
+      margin: 30px 5px;
+      max-width: 90%; }
+      .about-section .about .about-content h2 {
+        font-size: 15px; }
+      .about-section .about .about-content p {
+        margin: 10px 0;
+        font-size: 10px; }
+  .about-section .image {
+    width: 55%;
+    margin-top: 10px;
+    align-self: center; }
+    .about-section .image img {
+      width: 100%; }
+
+  .customer-section .customer h2 {
+    font-size: 20px; }
+  .customer-section .customer .card {
+    width: 80%;
+    flex-direction: column; }
+    .customer-section .customer .card .detail {
+      text-align: center;
+      padding: 0;
+      font-size: 15px; }
+  .customer-section .customer .touch {
+    display: flex;
+    flex-direction: column; }
+    .customer-section .customer .touch .con {
+      width: 90%; }
+      .customer-section .customer .touch .con p {
+        font-size: 12px; }
+    .customer-section .customer .touch .contactform,
+    .customer-section .customer .touch .newletter {
+      width: 85px;
+      height: 22px;
+      font-size: 10px; }
+
+  .footer-section .bottom {
+    flex-direction: column-reverse;
+    justify-content: center; }
+    .footer-section .bottom .leftfooter,
+    .footer-section .bottom .rightfooter {
+      text-align: center; }
+    .footer-section .bottom h3 {
+      font-size: 15px; }
+    .footer-section .bottom span {
+      font-size: 10px; }
+    .footer-section .bottom p {
+      font-size: 10px; }
+    .footer-section .bottom .midfooter {
+      width: 80%;
+      margin: 0 27px; }
+      .footer-section .bottom .midfooter h2 {
+        font-size: 15px;
+        margin-bottom: 0;
+        margin: 15px 0; } }
+
+/*# sourceMappingURL=style.css.map */
